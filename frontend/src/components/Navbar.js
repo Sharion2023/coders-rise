@@ -1,4 +1,4 @@
-export default function Navbar() {
+ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
       <div className="container-fluid">
