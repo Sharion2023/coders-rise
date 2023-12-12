@@ -12,6 +12,7 @@ export default function Form(){
   const[degreesFilter, setDegreesFilter] = useState()
   const[locationStates, setLocationStates] = useState(abbreviations)
   const[tuition, setTuitionChange] = useState(null)
+  const[schoolSize, setSchoolSize] = useState(0)
 
 
   // Using this function to update the state of degree
@@ -28,10 +29,25 @@ export default function Form(){
   let handleTuitionChange = (e) => {
    setTuitionChange(e.target.value)    
   }
+
+  let handleSchoolSizeChange = (e) => {
+    setSchoolSize(e.target.value)
+  }
+
+  function handleConfirm(deg, loc, tui){
+    console.log("here")
+    data.map((datapoint) =>
+    console.log({datapoint}.datapoint["school.name"])
+    
+    )
+    }
+  
+
  
   console.log(degreesFilter)
   console.log(locationStates)
   console.log(tuition)
+  console.log(schoolSize)
 
   return(
 
@@ -71,11 +87,26 @@ export default function Form(){
 
     <div className="form-group">
     <label value = "inputTuition">Tuition maximum:</label>
-    <input type="text" className="form-control" id="inputAddress" onSubmit={handleTuitionChange}></input>
+    <input type="text" className="form-control" id="inputAddress" onChange={handleTuitionChange}></input>
     </div>
-   <Button>Submit</Button>
+   
+
+   <div className="form-group" > 
+
+      <label value= "schoolSize">Select a school size:</label>
+      <select className="form-control" onChange={handleSchoolSizeChange}> 
+        <option value= "school size"> -- Select a school size -- </option>
+        <option value = "small">small: under 2,000 </option>
+        <option value="medium">medium: 2,000-15,000</option>
+        <option value="large">large: 15,000+ </option>      
+      </select>
+    </div>
+
+    <Button onClick={() => handleConfirm(degreesFilter, locationStates, tuition)}>Submit</Button>
     </form> 
 </div>
+
+    
 
   
   ) 
