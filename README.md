@@ -16,21 +16,17 @@ MySQL: Download MySQL
 Clone the repository:
 git clone https://github.com/JayWhiteBuffalo/coders-rise.git
 
-Navigate to the project directory:
-cd coders-rise
+Navigate to the project directory: cd coders-rise/frontend
 
-Install dependencies:
-npm install
+Install dependencies: npm install
 
-Set up the MySQL database:
-Create a MySQL database.
-Configure the database connection in backend/platform/src/main/resources/application.properties
+Open in VSCode: code .
 
-Run the backend application ("PlatformApplication") in IntelliJ
+Run frontend: npm start
 
-Start the frontend application by running the following command in terminal:
-npm start
+Set up the MySQL database: Create a MySQL database. Configure the database connection in backend/platform/src/main/resources/application.properties
 
+Run the backend application in IntelliJ: coders-rise/backend
 Access the application in your web browser at http://localhost:8081
 
 
